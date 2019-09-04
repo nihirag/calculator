@@ -20,35 +20,73 @@
 }
 .output-area
 {
-    border: 1px solid red;
     margin: 10px;
-    padding: 0px 10px;
+    /* border: 1px solid red; */
     text-align: right;
+    
 }
-.output-area p
+.output-area input
 {
-    padding: 10px 10px;
+    width: 100%;
+    background-color: transparent;
+    /* border: 1px solid black; */
+    border: none;
+    margin:5px 0px;
+    padding: 10px 0px;
 }
 .buttons
 {
     margin: 5px 5px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 5px 10px;
-    grid-gap: 10px;
+    grid-gap: 20px 20px;
 }
 
 .buttons button
 {
-    padding: 12px 12px;
+    /* padding: 12px 12px; */
     border: none;
+    height: 3.8rem;
     background-color: transparent;
     outline: none;
-    border-radius: 50%;
+    border-radius:40px;
+    font-size: 1rem;
+    font-family:"Lexend Deca";
+    
 }
 button.operator
 {
     background-color: red;
 
+}
+button[value ="÷"]
+{
+    background-color: rgb(255, 71, 87);
+    /* color: white;     */
+}
+button[value ="x"]
+{
+    background-color: rgb(249, 161, 2);
+}
+button[value ="-"]
+{
+    background-color: rgb(255, 107, 129);
+}
+button[value ="+"]
+{
+    background-color: rgb(30, 144, 255);
+}
+button[value ="="]
+{
+    background-color: rgb(46,213, 115);
+}
+button[value="allclear"], button[value="backspace"],  button[value="%"]
+{
+    background-color: rgb(201, 209, 219);
+}
+button[class="operator"]
+{
+    font-size: 1.2rem;
 }
