@@ -98,4 +98,21 @@ for(let i=0;i<numbers.length;i++)
         }
     })
 }
-    
+
+document.addEventListener("keydown",function(e){
+    let element;
+    if(e.key == "c" || e.key =="C")
+    {
+         element = document.querySelector(`button[value="allclear"]`);
+
+    }
+    else if(e.key == "Backspace")
+        element = document.querySelector(`button[value="backspace"]`);
+    else if(e.key == "Enter")
+        element = document.querySelector(`button[value="="]`);   
+        else if(e.key == "/")
+         element = document.querySelector(`button[value="/"]`);
+    else
+         element = document.querySelector(`button[value="${e.key}"]`);
+    element.click();
+})
