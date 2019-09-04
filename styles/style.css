@@ -45,7 +45,7 @@
 #history
 {
     height: 20px;
-    
+    letter-spacing: 2px;
     padding-top: 20px;
     font-size: 15px;
     color: #919191;
@@ -107,4 +107,9 @@ button[value="allclear"], button[value="backspace"],  button[value="%"]
 button[class="operator"]
 {
     font-size: 1.2rem;
+}
+
+button:hover
+{
+    opacity: 0.8;
 }

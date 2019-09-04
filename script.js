@@ -1,11 +1,3 @@
-function getFormattedNumber(num)
-{
-    if(num == "-"){
-        return "";
-    }
-    let n = Number(num);
-    return n.toLocaleString("en");
-}
 
 function getHistory()
 {
@@ -23,12 +15,7 @@ function printOutput(num){
         document.getElementById("output").innerText = num;
     }
     else
-        document.getElementById("output").innerText = getFormattedNumber(num);
-}
-
-function reverseFormat(num)
-{
-    return Number(num.replace(/,/g,''));
+        document.getElementById("output").innerText = num;
 }
 
 
@@ -45,7 +32,7 @@ for(let i=0;i<operator.length;i++)
         }
         if(this.value == "backspace")
         {
-            let output = reverseFormat(getOutput()).toString();
+            let output = getOutput().toString();
             if(output)
                 {
                     output= output.substr(0, output.length-1);
@@ -64,11 +51,11 @@ for(let i=0;i<operator.length;i++)
             }
             if(output!="" || history!="")
             {
-                output = output==""?output:reverseFormat(output);
                 history = history + output;
                 if(this.value == "=")
                 {
                     let result = eval(history);
+                    result = parseFloat(result).toPrecision(10);
                     printOutput(result);
                     printHistory("");
                 }
@@ -92,11 +79,23 @@ const numbers = document.getElementsByClassName("number");
 for(let i=0;i<numbers.length;i++)
 {
     numbers[i].addEventListener('click', function() {
-        let output = reverseFormat(getOutput());
+        let output = getOutput();
         if(output!=NaN)
         {
-            output= output+this.value;
-            printOutput(output);
+            if(this.value == ".")
+            {
+                output = output.toString();
+                if(!output.includes("."))
+                    {
+                        output = output + "."; 
+                        printOutput(output);
+                    }
+                    
+            }
+            else
+            {output= output+this.value;
+            printOutput(output);}
         }
     })
 }
+    
