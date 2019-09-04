@@ -55,7 +55,7 @@ for(let i=0;i<operator.length;i++)
                 if(this.value == "=")
                 {
                     let result = eval(history);
-                    result = parseFloat(result).toPrecision(10);
+                    result = parseFloat(result).toPrecision(13);
                     printOutput(result);
                     printHistory("");
                 }
