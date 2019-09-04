@@ -11,20 +11,20 @@
         <div class="container">
             <div class="calculator">
                 <div class="output-area">
-                    <input type="text" id="history" disabled>
-                    <input type="text" id="output" disabled>
+                    <p id="history"></p>
+                    <p id="output"></p>
                 </div> 
                 <div class="buttons">
                     <!--ROW1-->
-                    <button class="allclear" type="button" value="allclear">C</button>
-                    <button class="backspace" type="button" value="backspace">CE</button>
+                    <button class="operator" type="button" value="allclear">C</button>
+                    <button class="operator" type="button" value="backspace">CE</button>
                     <button class="operator" type="button" value="%">%</button>
-                    <button class="operator" type="button" value="÷">÷</button>
+                    <button class="operator" type="button" value="/">&#247;</button>
                     <!--ROW2-->
                     <button class="number" type="button" value="7">7</button>
                     <button class="number" type="button" value="8">8</button>
                     <button class="number" type="button" value="9">9</button>
-                    <button class="operator" type="button" value="x">x</button>
+                    <button class="operator" type="button" value="*">&times;</button>
                     <!--ROW3-->
                     <button class="number" type="button" value="4">4</button>
                     <button class="number" type="button" value="5">5</button>
@@ -36,12 +36,13 @@
                     <button class="number" type="button" value="3">3</button>
                     <button class="operator" type="button" value="+">+</button>
                     <!--ROW5-->
-                    <button class="empty" type="button" value=""></button>
+                    <button class="empty" type="button" value="" disabled></button>
                     <button class="number" type="button" value="0">0</button>
-                    <button class="decimal" type="button" value=".">.</button>
-                    <button type="button" class="equal-sign operator" value="=">=</button>
+                    <button class="number" type="button" value=".">.</button>
+                    <button type="button" class="operator" value="=">=</button>
                 </div> 
             </div>
         </div>
     </body>
+    <script src="script.js"></script>
 </html>
